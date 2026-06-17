@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA70 Archive</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
+    <header class="statusbar">
+      <a class="header-mark" href="#top" aria-label="NASA70 Archive">
+        <svg
+          class="header-mark__svg"
+          id="Layer_2"
+          data-name="Layer 2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 491.49 264.5">
+          <defs></defs>
+          <g id="Layer_1-2" data-name="Layer 1">
+            <circle fill="#0032a0" cx="318.51" cy="132.25" r="132.25" />
+            <g id="logoStars"></g>
+            <g>
+              <circle fill="#ffffff" cx="310.7" cy="26.35" r="1.48" />
+              <circle fill="#ffffff" cx="325.93" cy="28.33" r="1.48" />
+              <circle fill="#ffffff" cx="345.89" cy="55.22" r="1.48" />
+              <circle fill="#ffffff" cx="236.38" cy="193.59" r="1.48" />
+              <circle fill="#ffffff" cx="240.23" cy="205.45" r="1.48" />
+              <path
+                fill="#ffffff"
+                d="M222.96,195.37c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M282.14,217.56c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M376.7,197.92c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <circle fill="#ffffff" cx="404.18" cy="169.18" r="1.11" />
+              <path
+                fill="#ffffff"
+                d="M269.49,65c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M299.73,42.78c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M296.45,40.61c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M293.48,38.44c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M274.23,70.73c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M318.78,12.93c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M326.1,42.74c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <circle fill="#ffffff" cx="314.56" cy="37.6" r="1.11" />
+              <path
+                fill="#ffffff"
+                d="M293.68,46.1c0,.61.5,1.11,1.11,1.11s1.11-.5,1.11-1.11-.5-1.11-1.11-1.11-1.11.5-1.11,1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M381.97,227.25c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <circle fill="#ffffff" cx="234.5" cy="201.1" r="1.11" />
+              <path
+                fill="#ffffff"
+                d="M311.79,214.32c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M258.62,200.21c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M268.23,215.91c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M337.89,204.91c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M376.9,182.89c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M406.48,196.41c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M416.56,202.86c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M418.22,185.27c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <path
+                fill="#ffffff"
+                d="M271.14,160.36c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+              <circle fill="#ffffff" cx="271.56" cy="186.97" r="1.48" />
+              <path
+                fill="#ffffff"
+                d="M281.94,205.75c0-.82-.66-1.48-1.48-1.48s-1.48.66-1.48,1.48.66,1.48,1.48,1.48,1.48-.66,1.48-1.48Z" />
+              <circle fill="#ffffff" cx="387.01" cy="186.18" r="1.48" />
+              <circle fill="#ffffff" cx="425.36" cy="184" r="1.48" />
+              <path
+                fill="#ffffff"
+                d="M406.38,174.42c-.82,0-1.48.66-1.48,1.48s.66,1.48,1.48,1.48,1.48-.66,1.48-1.48-.66-1.48-1.48-1.48Z" />
+              <circle fill="#ffffff" cx="387.01" cy="176.69" r="1.48" />
+              <path
+                fill="#ffffff"
+                d="M345.15,26.73l.34,3.78.2-3.78c.68-.12,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.12-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25Z" />
+              <path
+                fill="#ffffff"
+                d="M282.93,67.77l.34,3.78.2-3.78c.68-.11,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.11-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25Z" />
+              <path
+                fill="#ffffff"
+                d="M422.66,174.43c-.11-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.34-1.31l3.69-.35-3.68-.21Z" />
+              <path
+                fill="#ffffff"
+                d="M270.97,229.81l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.14,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.12-.71-.69-1.27-1.4-1.36Z" />
+              <path
+                fill="#ffffff"
+                d="M409.55,202.14l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.34-1.31l3.69-.35-3.68-.21c-.11-.71-.69-1.27-1.4-1.36Z" />
+              <path
+                fill="#e4002b"
+                d="M426.45,66.38c-18.01,10.56-46.39,23.3-73.93,34.11l-2.64,1.03s-30.37,11.31-43.03,15.27c-25.71,8.05-96.07,29.85-138.57,57.33l3.56,1.38c25.9-14.63,42.73-19.22,58.91-24.31,17.59-5.54,74.47-18.85,100.22-26.09,8.7-2.45,18.89-5.65,29.69-9.55l3-1.09h0c21.53-7.96,45.08-18.6,63.8-31.46-8.98,8.51-38.66,30.69-56.76,43.06h0l-2.02,1.37s-6.84,4.52-9.03,5.79c-12.65,7.31-74.33,49.42-88.36,59.11-14.03,9.69-52.98,46.45-64.44,57.13l-.4,4.35c36.97-33.21,48.56-41.4,63.26-52.58,18.19-13.84,55.81-39.44,68.6-47.64,12.22-7.84,23.25-15.05,33.14-21.65l1.96-1.32h0s0,0,0,0l.42-.28h0c27.18-18.2,45.5-31.62,56.19-40.6,14.83-12.45,48.63-40.33,61.48-77.69-22.54,28.67-49.19,45.07-65.04,54.37Z" />
+            </g>
+            <path
+              fill="#e4002b"
+              d="M116.63,65.2c2.27-2.88.24-7.11-3.43-7.11h-.21s-113,0-113,0V4.93h153.88c19.11,0,34.6,15.49,34.6,34.6h0c0,8.5-3.1,16.72-8.78,23.03-41.02,45.52-76.52,115.44-78.95,197.02H35.32c3.16-87.46,49.49-153.78,81.27-194.32.01-.02.03-.04.04-.06Z" />
+          </g>
+        </svg>
+      </a>
+      <div class="statusbar__right">
+        <nav class="viewSwitch" id="viewSwitch" role="tablist" aria-label="View">
+          <button class="viewSwitch__btn is-active" data-view="graph" role="tab">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="13.5" cy="8" r="1" fill="currentColor"></circle>
+              <circle cx="11.88" cy="11.88" r="1" fill="currentColor"></circle>
+              <circle cx="8" cy="13.5" r="1" fill="currentColor"></circle>
+              <circle cx="4.12" cy="11.88" r="1" fill="currentColor"></circle>
+              <circle cx="2.5" cy="8" r="1" fill="currentColor"></circle>
+              <circle cx="4.12" cy="4.12" r="1" fill="currentColor"></circle>
+              <circle cx="8" cy="2.5" r="1" fill="currentColor"></circle>
+              <circle cx="11.88" cy="4.12" r="1" fill="currentColor"></circle>
+            </svg>
+            Constellation
+          </button>
+          <button class="viewSwitch__btn" data-view="grid" role="tab">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <rect x="1" y="1" width="6" height="6" fill="none" stroke="currentColor"></rect>
+              <rect x="9" y="1" width="6" height="6" fill="none" stroke="currentColor"></rect>
+              <rect x="1" y="9" width="6" height="6" fill="none" stroke="currentColor"></rect>
+              <rect x="9" y="9" width="6" height="6" fill="none" stroke="currentColor"></rect>
+            </svg>
+            Grid
+          </button>
+          <button class="viewSwitch__btn" data-view="table" role="tab">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <line x1="1" y1="3" x2="15" y2="3" stroke="currentColor"></line>
+              <line x1="1" y1="8" x2="15" y2="8" stroke="currentColor"></line>
+              <line x1="1" y1="13" x2="15" y2="13" stroke="currentColor"></line>
+            </svg>
+            List
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="snap-container" id="snapContainer">
+      <section class="hero" id="hero">
+        <a href="https://www.nasa.gov" target="_blank" rel="noopener" class="hero__exit"><span class="hero__exit-arrow">‹</span> nasa.gov</a>
+        <div class="hero__left">
+          <div class="hero__logo-wrap">
+            <svg
+              class="hero__logo-svg"
+              id="heroLogoLayer2"
+              data-name="Layer 2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1449.83 266.23">
+              <defs>
+                <style>
+                  .n70h-1 {
+                    fill: #e4002b;
+                  }
+                  .n70h-2 {
+                    fill: #f6f6f6;
+                  }
+                  .n70h-3 {
+                    fill: #0032a0;
+                  }
+                  .n70h-4 {
+                    fill: #ffffff;
+                  }
+                </style>
+              </defs>
+              <g id="heroLogoLayer1" data-name="Layer 1">
+                <circle class="n70h-3" cx="1276.86" cy="133.12" r="132.25" />
+                <g id="heroLogoStars"></g>
+                <g>
+                  <circle class="n70h-4" cx="1269.05" cy="27.22" r="1.48" />
+                  <circle class="n70h-4" cx="1284.27" cy="29.2" r="1.48" />
+                  <circle class="n70h-4" cx="1304.23" cy="56.08" r="1.48" />
+                  <circle class="n70h-4" cx="1194.72" cy="194.46" r="1.48" />
+                  <circle class="n70h-4" cx="1198.57" cy="206.32" r="1.48" />
+                  <path
+                    class="n70h-4"
+                    d="M1181.3,196.24c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1240.48,218.42c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1335.05,198.78c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <circle class="n70h-4" cx="1362.53" cy="170.05" r="1.11" />
+                  <path
+                    class="n70h-4"
+                    d="M1227.83,65.86c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1258.08,43.65c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1254.79,41.48c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1251.83,39.3c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1232.57,71.6c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1277.13,13.8c.61,0,1.11-.5,1.11-1.11s-.5-1.11-1.11-1.11-1.11.5-1.11,1.11.5,1.11,1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1284.44,43.61c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <circle class="n70h-4" cx="1272.9" cy="38.46" r="1.11" />
+                  <path
+                    class="n70h-4"
+                    d="M1252.02,46.97c0,.61.5,1.11,1.11,1.11s1.11-.5,1.11-1.11-.5-1.11-1.11-1.11-1.11.5-1.11,1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1340.31,228.12c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <circle class="n70h-4" cx="1192.84" cy="201.97" r="1.11" />
+                  <path
+                    class="n70h-4"
+                    d="M1270.13,215.19c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1216.96,201.08c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1226.57,216.77c0-.61-.5-1.11-1.11-1.11s-1.11.5-1.11,1.11.5,1.11,1.11,1.11,1.11-.5,1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1296.23,205.78c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1335.24,183.76c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1364.82,197.28c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1374.91,203.73c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1376.56,186.13c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1229.48,161.23c-.61,0-1.11.5-1.11,1.11s.5,1.11,1.11,1.11,1.11-.5,1.11-1.11-.5-1.11-1.11-1.11Z" />
+                  <circle class="n70h-4" cx="1229.91" cy="187.84" r="1.48" />
+                  <path
+                    class="n70h-4"
+                    d="M1240.28,206.62c0-.82-.66-1.48-1.48-1.48s-1.48.66-1.48,1.48.66,1.48,1.48,1.48,1.48-.66,1.48-1.48Z" />
+                  <circle class="n70h-4" cx="1345.35" cy="187.05" r="1.48" />
+                  <circle class="n70h-4" cx="1383.7" cy="184.87" r="1.48" />
+                  <path
+                    class="n70h-4"
+                    d="M1364.72,175.28c-.82,0-1.48.66-1.48,1.48s.66,1.48,1.48,1.48,1.48-.66,1.48-1.48-.66-1.48-1.48-1.48Z" />
+                  <circle class="n70h-4" cx="1345.35" cy="177.56" r="1.48" />
+                  <path
+                    class="n70h-4"
+                    d="M1303.5,27.6l.34,3.78.2-3.78c.68-.12,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.12-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1241.27,68.64l.34,3.78.2-3.78c.68-.11,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.11-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1381.01,175.3c-.11-.71-.69-1.27-1.4-1.36l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.34-1.31l3.69-.35-3.68-.21Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1229.32,230.68l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.14,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.35-1.31l3.69-.35-3.68-.21c-.12-.71-.69-1.27-1.4-1.36Z" />
+                  <path
+                    class="n70h-4"
+                    d="M1367.89,203l-.35-3.67-.21,3.7c-.67.15-1.18.71-1.26,1.4l-3.77.34,3.8.2c.14.64.65,1.13,1.3,1.25l.34,3.78.2-3.78c.68-.11,1.22-.64,1.34-1.31l3.69-.35-3.68-.21c-.11-.71-.69-1.27-1.4-1.36Z" />
+                  <path
+                    class="n70h-1"
+                    d="M1384.79,67.25c-18.01,10.56-46.39,23.3-73.93,34.11l-2.64,1.03s-30.37,11.31-43.03,15.27c-25.71,8.05-96.07,29.85-138.57,57.33l3.56,1.38c25.9-14.63,42.73-19.22,58.91-24.31,17.59-5.54,74.47-18.85,100.22-26.09,8.7-2.45,18.89-5.65,29.69-9.55l3-1.09h0c21.53-7.96,45.08-18.6,63.8-31.46-8.98,8.51-38.66,30.69-56.76,43.06h0l-2.02,1.37s-6.84,4.52-9.03,5.79c-12.65,7.31-74.33,49.42-88.36,59.11-14.03,9.69-52.98,46.45-64.44,57.13l-.4,4.35c36.97-33.21,48.56-41.4,63.26-52.58,18.19-13.84,55.81-39.44,68.6-47.64,12.22-7.84,23.25-15.05,33.14-21.65l1.96-1.32h0s0,0,0,0l.42-.28h0c27.18-18.2,45.5-31.62,56.19-40.6,14.83-12.45,48.63-40.33,61.48-77.69-22.54,28.67-49.19,45.07-65.04,54.37Z" />
+                </g>
+                <circle id="heroMeatballHitArea" cx="1276.86" cy="133.12" r="132.25" fill="transparent" style="cursor:default"/>
+                  <g>
+                    <path
+                      class="n70h-2"
+                      d="M0,259.98L.22,58.83c.02-21.39,10.16-40.77,30.22-50.57C49.75-1.17,72.21-2.37,92.79,3.88c29.79,9.04,38.51,34.15,45.98,62.2l35.93,134.92c2.15,8.07,9.19,12.15,16.56,11.57,7.04-.56,10.87-5.02,11.99-12.23l.03-194.33h55.02s-.15,202.95-.15,202.95c-.62,23.78-13.31,42.92-34.9,51.67-10.6,4.29-20.94,5.49-32.48,5.61-29.52.31-52.54-12.29-62.99-40.03-2.96-7.85-5.43-15.16-7.65-23.49l-36.59-137.31c-2.01-7.54-8.56-11.48-15.52-11.37-7.14.11-12.89,5.01-12.89,12.93l-.05,193.62-49.07.03-5.99-.64Z" />
+                    <path
+                      class="n70h-2"
+                      d="M562.16,59.95c-13.6.51-20.85,9.41-21.46,21.8-.55,11.05,4.66,20.79,16.31,23.35l14.38,1.59,51.39.11c12.15.03,23.77.78,35.58,3.46,21.8,4.94,38.86,19.52,46.67,40.52,14.66,39.41,2.63,82.46-36.04,102.01-12.69,4.61-24.9,7.65-38.88,7.66l-175.07.2-64.34-200.76c-1.49-4.66-5.62-6.28-9.55-6.18-4.11.1-7.29,2.29-8.88,6.9l-64.12,200.05-56.8-.15,71.03-221.52C334.05,8.34,358.85-2.52,390.76.51c23.01,1.51,42.67,16.01,49.9,38.53l53.93,167.75,141.88-.2c12.53-.02,20.74-9.53,20.63-21.25,1.5-11.37-4.6-21.32-15.94-23.79-5.32-1.15-11.12-1.65-16.81-1.66l-51.96-.09c-11.51-.02-22.56-1.04-33.58-3.68-21.44-5.14-38.1-19.61-45.77-40.31-14.61-39.45-2.23-83.7,36.35-101.82,12.94-6.08,26.13-6.94,40.3-7.97l129.63-.03v53.92s-137.19.04-137.19.04Z" />
+                    <path
+                      class="n70h-2"
+                      d="M838.32,61.71c-1.32-4.99-4.5-7.68-8.71-7.97-4.94-.35-8.76,2-10.4,7.25l-63.98,199.64-56.8-.11,71.15-221.91c7.96-21.87,26.46-36.51,49.53-38.1l20.02.05c22.81,2,40.67,16.4,48.6,38.03l71.14,221.88-56.72.27-63.83-199.03Z" />
+                  </g>
+                </g>
+                <path
+                  class="n70h-1"
+                  d="M1074.98,66.07c2.27-2.88.24-7.11-3.43-7.11h-.21s-113,0-113,0V5.79h153.88c19.11,0,34.6,15.49,34.6,34.6h0c0,8.5-3.1,16.72-8.78,23.03-41.02,45.52-76.52,115.44-78.95,197.02h-65.43c3.16-87.46,49.49-153.78,81.27-194.32.01-.02.03-.04.04-.06Z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="hero__right">
+          <h1 class="hero__phrase">
+            Seventy<br />years of<br />
+            exploration.
+          </h1>
+          <p class="hero__desc">
+            An archive of interactive projects by Visual Communication students at SUPSI for the Interaction Design
+            course, exploring NASA's 70 years of space research, history, and discovery.
+          </p>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog">
+        <div class="view view--graph is-active" data-view="graph">
+          <div class="viewHeader">
+            <div class="viewHeader__left">
+              <h2 class="viewHeader__title">Constellation view</h2>
+              <p class="viewHeader__sub"><span class="result-detail">13 / 13</span></p>
+            </div>
+            <div class="viewHeader__controls">
+              <button class="legendToggle" id="legendToggle" aria-expanded="false">
+                <span>How to read this</span>
+                <span class="legendToggle__chev">&#9662;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="legend is-collapsed" id="legend">
+            <ol class="legend__list">
+              <li>
+                <span class="legend__num">01</span>
+                <p>
+                  <strong>Tags act as anchors.</strong> Every thematic tag is pinned to a fixed spot on the outer ring
+                  in alphabetical order. Because these positions are permanent, they create a reliable coordinate system
+                  for the entire map.
+                </p>
+              </li>
+              <li>
+                <span class="legend__num">02</span>
+                <p>
+                  <strong>Projects find their center of gravity.</strong> A project's position is calculated based on
+                  its tags. If a project is tagged with <em>moon</em>, <em>apollo</em>, and <em>archive</em>, it lands
+                  geometrically in the middle of those three anchors.
+                </p>
+              </li>
+              <li>
+                <span class="legend__num">03</span>
+                <p>
+                  <strong>Connections light up on hover.</strong> Relationships are revealed through interaction.
+                  Hovering over a project highlights all its tags on the outer ring, while hovering over a tag
+                  illuminates every project connected to it.
+                </p>
+              </li>
+              <li>
+                <span class="legend__num">04</span>
+                <p>
+                  <strong>Navigate the space.</strong> Scroll to zoom in and explore the constellation in detail. You
+                  can drag to pan across the view, and hover over any point to reveal the project's name and its
+                  connected tags. Tags are ordered alphabetically around the outer ring.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="cnode-panel" id="cnodePanel" hidden>
+            <div class="cnode-panel__title" id="cnodePanelTitle"></div>
+            <div class="cnode-panel__author dim" id="cnodePanelAuthor"></div>
+            <div class="cnode-panel__tags" id="cnodePanelTags"></div>
+          </div>
+
+          <div class="constellation-layout">
+            <div class="constellation-sidebar" id="constellationSidebar">
+              <div class="sidebar-section-head">
+                <span class="sidebar-section-label">Tags</span>
+                <button class="sidebar-toggle-all" id="sidebarToggleAll">reset</button>
+              </div>
+              <div id="sidebarTagList"></div>
+            </div>
+            <div class="constellation-canvas">
+              <div class="constellationWrap">
+                <svg
+                  id="constellation"
+                  class="constellation"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Tag-anchored project map"></svg>
+                <div class="constellation__hud dim" id="constellationHud">
+                  <span id="hudHint">Scroll to zoom &middot; Drag to pan &middot; Hover to explore</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view view--grid" data-view="grid">
+          <div class="viewHeader">
+            <div class="viewHeader__left">
+              <h2 class="viewHeader__title">Grid view</h2>
+              <p class="viewHeader__sub"><span class="result-detail">13 / 13</span></p>
+            </div>
+            <div class="viewHeader__controls">
+              <div class="dropdown" id="gridSort">
+                <button class="dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="dropdown__value">Sort: Title</span>
+                  <svg class="dropdown__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+                </button>
+                <ul class="dropdown__menu" role="listbox" tabindex="-1">
+                  <li class="dropdown__option is-selected" role="option" data-value="title" aria-selected="true">Title</li>
+                  <li class="dropdown__option" role="option" data-value="author" aria-selected="false">Author</li>
+                  <li class="dropdown__option" role="option" data-value="date" aria-selected="false">Date</li>
+                  <li class="dropdown__option" role="option" data-value="tags" aria-selected="false">Tag count</li>
+                </ul>
+              </div>
+              <div class="dropdown" id="gridTagFilter">
+                <button class="dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="dropdown__value">All tags</span>
+                  <svg class="dropdown__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+                </button>
+                <ul class="dropdown__menu" role="listbox" tabindex="-1">
+                  <li class="dropdown__option dropdown__option--clear" role="option" hidden>Clear filters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="wall" id="wall"></div>
+        </div>
+
+        <div class="view view--table" data-view="table">
+          <div class="viewHeader">
+            <div class="viewHeader__left">
+              <h2 class="viewHeader__title">List view</h2>
+              <p class="viewHeader__sub"><span class="result-detail">13 / 13</span></p>
+            </div>
+            <div class="viewHeader__controls">
+              <div class="dropdown" id="listTagFilter">
+                <button class="dropdown__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="dropdown__value">All tags</span>
+                  <svg class="dropdown__chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0l5 6 5-6z" fill="currentColor"/></svg>
+                </button>
+                <ul class="dropdown__menu" role="listbox" tabindex="-1">
+                  <li class="dropdown__option dropdown__option--clear" role="option" hidden>Clear filters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ledgerWrap">
+            <table class="ledger" id="ledger">
+              <thead>
+                <tr>
+                  <th class="ledger__th ledger__th--thumb"><span></span></th>
+                  <th data-sort="titolo" class="ledger__th is-sorted ledger__th--asc">
+                    <button>Title <span class="ledger__sortmark"></span></button>
+                  </th>
+                  <th data-sort="autore" class="ledger__th">
+                    <button>Author <span class="ledger__sortmark"></span></button>
+                  </th>
+                  <th data-sort="tagcount" class="ledger__th">
+                    <button>Tags <span class="ledger__sortmark"></span></button>
+                  </th>
+                  <th data-sort="data" class="ledger__th ledger__th--num ledger__th--filed">
+                    <button>Date <span class="ledger__sortmark"></span></button>
+                  </th>
+                  <th class="ledger__th ledger__th--link">Link</th>
+                </tr>
+              </thead>
+              <tbody id="ledgerBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="drawer" id="drawer" aria-hidden="true" tabindex="-1">
+      <button class="drawer__close" id="drawerClose" aria-label="Close detail">&times;</button>
+      <div class="drawer__inner" id="drawerInner"></div>
+    </aside>
+    <div class="drawer__scrim" id="drawerScrim"></div>
+
+    <template id="tpl-card">
+      <article class="card" tabindex="0">
+        <div class="card__plate">
+          <div class="card__thumb"></div>
+        </div>
+        <div class="card__body">
+          <div class="card__header">
+            <h3 class="card__title"></h3>
+            <div class="card__subtitle mono"></div>
+          </div>
+          <div class="card__desc"></div>
+          <ul class="card__tags"></ul>
+        </div>
+      </article>
+    </template>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
