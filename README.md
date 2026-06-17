@@ -25,6 +25,14 @@ In termini di scelte visive:
 
 Come base concettuale ho preso spunto dalla generous interface di Mitchell Whitelaw e dai vari NASA Eyes. Per la Constellation ho preso ispirazione dalle mappe stellari e dai grafi di rete, riadattandoli nel contesto per maggior leggibilità e pertinenza con i progetti.
 
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/caeb3103-c49f-4f4e-9288-e9fb2c5d97f7" height="320">
+  &nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/ed1708e4-1db9-420d-a77e-056c923edaaf" height="320">
+  <br>
+  <sub><em>A sinistra: grafo di rete (<a href="https://commons.wikimedia.org/wiki/File:Network_1.png">Jorge11711, CC0</a>). A destra: Mappa Stellare di Suzhou, 1247, di Wang Zhiyuan e Huang Shang (<a href="https://commons.wikimedia.org/wiki/File:Suzhou_star_cartography.jpg">Pubblico Dominio</a>).</em></sub>
+</p>
+
 ## Design dell’interfaccia e modalità di interazione
 
 Il sito è strutturato su una pagina unica che contiene due `<section>`. La prima sezione è riservata all'hero section, che contiene il logo NASA70, una frase introduttiva che spiega cosa tratta il sito e il rimando al sito ufficiale della [NASA](https://nasa.gov).
