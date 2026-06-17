@@ -660,7 +660,7 @@ html {
 }
 .gx-edge-hit {
   stroke: transparent;
-  stroke-width: 12;
+  stroke-width: 6;
   fill: none;
   cursor: pointer;
 }

@@ -751,18 +751,7 @@ function renderConstellation(list) {
       const ex1 = pPos.x + (edx / edLen) * nodeR;
       const ey1 = pPos.y + (edy / edLen) * nodeR;
       const line = el("line", { x1: ex1, y1: ey1, x2: tp.x, y2: tp.y, class: "gx-edge" });
-      const hit = el("line", { x1: ex1, y1: ey1, x2: tp.x, y2: tp.y, class: "gx-edge-hit" });
-      eg.appendChild(line); eg.appendChild(hit);
-      hit.addEventListener("mouseenter", () => {
-        line.classList.add("is-hover");
-        const tagNode = document.querySelector(`.gx-tag[data-tag="${CSS.escape(t)}"]`);
-        if (tagNode) tagNode.classList.add("is-edge-hover");
-      });
-      hit.addEventListener("mouseleave", () => {
-        line.classList.remove("is-hover");
-        const tagNode = document.querySelector(`.gx-tag[data-tag="${CSS.escape(t)}"]`);
-        if (tagNode) tagNode.classList.remove("is-edge-hover");
-      });
+      eg.appendChild(line);
       edgeLayer.appendChild(eg);
     }
   }
