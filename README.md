@@ -4,7 +4,7 @@ Docenti: A. Gysin, G. Profeta
 
 Progetto 2: Un piccolo passo per un uomo, un grande balzo per l'umanità
 
-# NASA70 Archive
+# NASA70
 
 **Autore:** Djordja Krsteva  
 [NASA70 Archive](https://djordjaa.github.io/NASA70/)
@@ -15,15 +15,10 @@ Progetto 2: Un piccolo passo per un uomo, un grande balzo per l'umanità
 
 Questo sito è pensato e testato come archivio espandibile, ogni visualizzazione è compatibile con almeno 100 progetti.
 
-In termini di scelte visive:
-
-- **Colori:** La palette colori include **nero** (#0a0a0f) per lo sfondo, **bianco** (#f6f6f6) per la maggior parte dei testi e **blu** (#0032a0) e **rosso NASA** (#e4002b) per il logo. Il rosso NASA viene utilizzato anche come accento in una **versione modificata** (#f31b43) in modo da rispettare i valori di contrasto WCAG con lo sfondo. Ho evitato il bianco e nero puro per evitare un contrasto troppo forte che potrebbe affaticare la vista.
-- **Tipografia:** Viene utilizzato **Inter** per ogni testo presente nel sito, nei pesi Regular, Medium, SemiBold e Bold. È uno dei font usati oggi dalla NASA per il proprio sito web. È un carattere tipografico semplice e leggibile anche a dimensioni piccole.
-- **Logo:** Essendo un festeggiamento per i 70 anni, ho voluto rappresentarli tramite l'unione dei due loghi storici della NASA: il **Worm** e il **Meatball**. Nello specifico la parte NASA utilizza il logo originale Worm, mentre il 70 unisce i due stili, con lo 0 che rappresenta il Meatball.
 
 ## Riferimenti progettuali
 
-Come base concettuale ho preso spunto dalla generous interface di Mitchell Whitelaw e dai vari NASA Eyes. Per la Constellation ho preso ispirazione dalle mappe stellari e dai grafi di rete, riadattandoli nel contesto per maggior leggibilità e pertinenza con i progetti.
+Come base concettuale ho preso spunto dalla generous interface di Mitchell Whitelaw e dai vari NASA Eyes. Per la Constellation mi sono ispirata alle mappe stellari e ai grafi di rete, riadattandoli nel contesto per maggior leggibilità e pertinenza con i progetti.
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/caeb3103-c49f-4f4e-9288-e9fb2c5d97f7" height="320">
@@ -61,10 +56,15 @@ Scendendo, si arriva alla seconda sezione, che contiene le 3 view separate da un
 
 &nbsp;
 
-In tutte le view c'è un contatore che mostra quanti progetti sono visibili sul totale. Cliccando su un progetto, da qualunque view, si apre un pannello laterale da destra con immagine, autore, data, descrizione completa, tag e link al progetto originale.<br>
+In tutte le view c'è un contatore che mostra quanti progetti sono visibili sul totale. Cliccando su un progetto, da qualunque view, si apre un pannello laterale da destra con titolo, immagine, autore, data, descrizione completa, tag e link al progetto originale.<br>
 
 https://github.com/user-attachments/assets/91d827d8-b6c3-4215-b3bc-e06f2e2eff04
 
+In termini di scelte visive:
+
+- **Colori:** La palette colori include **nero** (#0a0a0f) per lo sfondo, **bianco** (#f6f6f6) per la maggior parte dei testi e **blu** (#0032a0) e **rosso NASA** (#e4002b) per il logo. Il rosso NASA viene utilizzato anche come accento in una **versione modificata** (#f31b43) in modo da rispettare i valori di contrasto WCAG con lo sfondo. Ho evitato il bianco e nero puro per evitare un contrasto troppo forte che potrebbe affaticare la vista.
+- **Tipografia:** Viene utilizzato **Inter** per ogni testo presente nel sito, nei pesi Regular, Medium, SemiBold e Bold. È uno dei font usati oggi dalla NASA per il proprio sito web. È un carattere tipografico semplice e leggibile anche a dimensioni piccole.
+- **Logo:** Essendo un festeggiamento per i 70 anni, ho voluto rappresentarli tramite l'unione dei due loghi storici della NASA: il **Worm** e il **Meatball**. Nello specifico la parte NASA utilizza il logo originale Worm, mentre il 70 unisce i due stili, con lo 0 che rappresenta il Meatball.
 
 ## Tecnologia usata
 
@@ -72,7 +72,7 @@ Il progetto è sviluppato in **HTML, CSS e JavaScript vanilla**, senza l’uso d
 
 I dati vengono inseriti grazie ad un'API esterna su Github in formato JSON, che è stata riempita con l'inserimento dei dati del progetto 1 da parte di ognuno di noi. Sono stati comunque inseriti dei fallback nel caso ci dovessero essere problemi con l'API. I tag vengono uniformati in minuscolo, senza spazi superflui e con i trattini convertiti in spazio, così da avere tutto coerente.
 
-La posizione dei nodi nella Constellation viene dalla media delle coordinate dei tag che ogni progetto condivide:
+Per la visualizzazione grafica della Constellation View ho utilizzato elementi **SVG**. La posizione dei nodi nella Constellation viene dalla media delle coordinate dei tag che ogni progetto condivide:
 
 ```js
 const projPos = new Map();
@@ -94,6 +94,35 @@ for (const p of state.raw) {
 ```
 
 Per verificare che la vista restasse leggibile anche con un archivio più grande, la Constellation è stata testata con almeno 100 progetti. Da quel test ho deciso che i titoli dei progetti compaiono solo a partire da un certo livello di zoom e ogni scheda nella Grid mostra al massimo 12 tag con un indicatore "+N" per quelli in eccesso.
+
+Interazione progetti all'hover:
+```js
+// Gestione dinamica dell'hover nella Constellation View
+function highlightTag(tag) {
+  const svg = document.getElementById("constellation");
+  svg.classList.add("has-focus");
+
+  // Evidenzia il tag selezionato
+  svg.querySelectorAll(".gx-tag").forEach(g => g.classList.toggle("is-active", g.dataset.tag === tag));
+
+  // Cerca i progetti che contengono quel tag e ne aggiorna l'opacità
+  const projectsWithTag = new Set(state.raw.filter(p => p._tags.includes(tag)).map(p => p._id + ""));
+  svg.querySelectorAll(".gx-project").forEach(g => {
+    const active = projectsWithTag.has(g.dataset.project);
+    g.classList.toggle("is-active", active);
+    const lbl = g.querySelector(".gx-project-label");
+    if (lbl) lbl.style.opacity = (active && projectsWithTag.size <= 4) ? "1" : "";
+  });
+}
+
+// Ripristino dello stato iniziale all'uscita del cursore
+function clearHighlight() {
+  const svg = document.getElementById("constellation");
+  svg.classList.remove("has-focus");
+  svg.querySelectorAll(".is-active").forEach(g => g.classList.remove("is-active"));
+  svg.querySelectorAll(".gx-project-label, .gx-tag-label").forEach(el => { el.style.opacity = ""; });
+}
+```
 
 L'animazione del logo usa un seed fisso per generare le posizioni delle stelle, quindi il risultato resta lo stesso a ogni caricamento della pagina.
 
