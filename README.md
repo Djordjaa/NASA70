@@ -7,7 +7,7 @@ Progetto 2: Un piccolo passo per un uomo, un grande balzo per l'umanità
 # NASA70 Archive
 
 **Autore:** Djordja Krsteva  
-[NASA70 Archive]()
+[NASA70 Archive](https://djordjaa.github.io/NASA70/)
 
 ## Introduzione e tema
 
@@ -31,15 +31,32 @@ Il sito è strutturato su una pagina unica che contiene due `<section>`. La prim
 
 - **Hover logo:** lo 0 nel 70 crea nuove stelle che si espandono intorno ad esso. L'animazione vuole rappresentare gli anni e il tempo attraverso le stelle e il loro numero e riprendere la dinamica della Constellation view del progetto (spiegata sotto).
 
+https://github.com/user-attachments/assets/249b9eff-4028-4aae-8fb3-424a8bf4ea17
+
 Scendendo, si arriva alla seconda sezione, che contiene le 3 view separate da un menu posto nella navbar:
 
 1. **Constellation**: La visualizzazione di default, i progetti sono pallini distribuiti in uno spazio bidimensionale. I tag sono ancorati a posizioni fisse su un anello esterno, in ordine alfabetico. Ogni progetto si posiziona invece al centro dei tag che condivide: un progetto con i tag moon, apollo e archive finisce geometricamente in mezzo a quei tre punti. Passando sopra un punto si possono vedere i tag assegnati e passando su un tag vengono mostrati i progetti che condividono quel tag stesso. I titoli dei progetti e dei tag vengono mostrati solo se si zoomma maggiormente o se si passa su uno dei tag, questo per rendere la navigazione più interattiva. È possibile zoommare con lo scroll, spostarsi nello spazio tenendo premuto o trascinando, filtrare tramite la barra laterale con i filtri o direttamente cliccando sui tag lungo l'anello o nel pannello dettaglio. Passando il mouse su un progetto appare un riquadro con titolo, autore, tag.
 
+<img width="1728" height="961" alt="constellation_view" src="https://github.com/user-attachments/assets/812b2f57-709d-4e97-9b4a-51a498db7f66" />
+
+&nbsp;
+
 2. **Grid**: Nella Grid i progetti sono card con immagine, titolo, autore, data, descrizione e tag. Due menu a tendina permettono di ordinare la lista per titolo, autore, data o numero di tag, e di filtrare per tag.
+
+<img width="1728" height="961" alt="grid_view" src="https://github.com/user-attachments/assets/836a63df-f24f-4056-b55d-e060fb26a586" />  
+
+&nbsp;
 
 3. **List**: I progetti sono in formato a lista, con colonne per thumbnail, titolo, autore, tag, data e link. Ogni colonna (eccetto thumbnail e link) è ordinabile cliccando sull'intestazione, e un menu a tendina permette di filtrare per tag.
 
-In tutte le view c'è un contatore che mostra quanti progetti sono visibili sul totale. Cliccando su un progetto, da qualunque view, si apre un pannello laterale da destra con immagine, autore, data, descrizione completa, tag e link al progetto originale.
+<img width="1728" height="961" alt="list_view" src="https://github.com/user-attachments/assets/0b2335d8-aa7e-456f-b6eb-4fb5253367f3" />
+
+&nbsp;
+
+In tutte le view c'è un contatore che mostra quanti progetti sono visibili sul totale. Cliccando su un progetto, da qualunque view, si apre un pannello laterale da destra con immagine, autore, data, descrizione completa, tag e link al progetto originale.<br>
+
+https://github.com/user-attachments/assets/91d827d8-b6c3-4215-b3bc-e06f2e2eff04
+
 
 ## Tecnologia usata
 
@@ -76,4 +93,4 @@ Filtri, tag cliccabili e righe della tabella sono navigabili da tastiera, con un
 
 ## Target e contesto d’uso
 
-Il target primario è un pubblico generalista, qualcuno in ambito tech e creativo, curiosi di spazio o interessati al lavoro degli studenti. Il sito si presta anche per mostrare i progetti in presentazioni o esposizioni.
+Il target primario è un pubblico generalista, persone in ambito tech e creativo, curiosi di spazio o interessati al lavoro degli studenti. Il sito si presta anche per mostrare i progetti in presentazioni o esposizioni.
